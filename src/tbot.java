@@ -1,3 +1,5 @@
+import twitter4j.Query;
+import twitter4j.QueryResult;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -9,5 +11,9 @@ public class TBot
 	public static void main(String... args) throws TwitterException
 	{
 		//begin base code below
+		//access twitter API
+		Twitter twitter = TwitterFactory.getSingleton();
+
+
 	}
 }
