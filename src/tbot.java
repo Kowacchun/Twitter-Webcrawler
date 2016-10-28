@@ -11,8 +11,10 @@ public class TBot
 	public static void main(String... args) throws TwitterException
 	{
 		//begin base code below
-		//access twitter API
-		Twitter twitter = TwitterFactory.getSingleton();
+
+		TwitterStream twitterStream = new TwitterStreamFactory(config).getInstance();
+		TweetListener listener = new TweetListener();
+		twitterStream.addListener(listener);
 
 
 	}
