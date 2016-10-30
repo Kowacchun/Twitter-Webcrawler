@@ -14,7 +14,39 @@ public class TBot
 
 		TwitterStream twitterStream = new TwitterStreamFactory(config).getInstance();
 		TweetListener listener = new TweetListener();
+
+		@Override
+		public void onStatus(Status status) {
+			System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText());
+		}
+
+		@Override
+		public void onDeletionNotice(StatusDeletionNotice statusDeletionNotice) {
+			System.out.println("Status deletion Notice ID: " + statusDeletionNotice.getStatusId());
+		}
+
+		@Override
+		public void onTrackLimitationNotice(int numberOfLimitedStatuses) {
+			System.out.println("Track Limitation Notice: " + numberOfLimitedStatuses);
+		}
+
+		@Override
+		public void onScrubGeo(long userId, long upToStatusId) {
+			System.out.println("Scrub_Geo Event User ID:" + userId + " upToStatusId:" + upToStatusId);
+		}
+
+		@Override
+		public void onStallWarning(StallWarning warning) {
+			System.out.println("Stall Warning: " + warning);
+		}
+
+		@Override
+		public void onException(Exception e) {
+			e.printStackTrace();
+		}
+
 		twitterStream.addListener(listener);
+		twitterStream.sample();
 
 
 	}
