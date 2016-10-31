@@ -18,7 +18,8 @@ public class TBot
 
 			@Override
 
-			public void onStatus(Status status){
+			public void onStatus(Status status)
+			{
 				System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText());
 			}
 
