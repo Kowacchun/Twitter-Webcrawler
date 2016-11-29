@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Twitter Search</title>
+		<meta charset="UTF-8">
+
+		<script src="client/js/angular-1.0.7.min.js" type="text/javascript"></script>
+
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="client/css/bootstrap-theme.min.css"></link>
+		<link rel="stylesheet" href="client/css/sandstone.min.css"></link>
+		<link rel="stylesheet" href="client/css/index.css"></link>
+		<script src="client/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script src="client/js/bootstrap.min.js" type="text/javascript"></script>
+
+		<script src="app.js" type="text/javascript"></script>
+		<script src="client/js/main/maincontroller.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div id="main" ng-app="MainApp" ng-controller="MainController">
+			<div class="searchbar">
+				<div class="col-lg-6 col-lg-offset-3">
+					<div class="form-group">
+					  <div class="input-group">
+					    <input class="form-control" placeholder="Search" type="text">
+					    <span class="input-group-btn">
+					      <button class="btn btn-default" type="button">Search</button>
+					    </span>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

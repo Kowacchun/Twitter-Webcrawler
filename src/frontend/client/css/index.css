@@ -1,0 +1,10 @@
+body {
+	background-image: url("../img/twitter.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.searchbar {
+	padding-top: 140px;
+}
